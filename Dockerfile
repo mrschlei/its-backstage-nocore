@@ -14,7 +14,7 @@ ENV APACHE2=/usr/sbin/apache2
 RUN apt-get update \
 	&& apt-get install -y wget gcc make openssl \
 		libssl-dev apache2-dev autoconf \
-		libaio gzip make
+		libaio1 libaio-dev gzip make
 
 ### Build Cosign ###
 RUN wget "$COSIGN_URL" \
